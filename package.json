@@ -2,11 +2,14 @@
   "name": "javascript-development-environment",
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight env by Rustam Eynaliyev",
-  "scripts": {},
+  "scripts": {
+    "start": "node ./build-scripts/src-server.js"
+  },
   "author": "Rustam Eynaliyev",
   "license": "MIT",
   "dependencies": {
-    "whatwg-fetch": "1.0.0"
+    "whatwg-fetch": "1.0.0",
+    "micro": "latest"
   },
   "devDependencies": {
     "babel-cli": "6.16.0",
