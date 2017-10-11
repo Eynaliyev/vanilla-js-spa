@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight env by Rustam Eynaliyev",
   "scripts": {
-    "start": "node ./build-scripts/src-server.js"
+	"prestart": "babel-node build-scripts/start-message.js",
+	"start": "npm-run-all --parallel security-check open:src",
+	"open:src": "node build-scripts/src-server.js",
+	"security-check": "nsp check",
+	"share": "npm-run-all --parallel open:src now",
+	"now": "now --public"
   },
   "author": "Rustam Eynaliyev",
   "license": "MIT",
