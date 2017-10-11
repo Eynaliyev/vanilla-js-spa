@@ -5,7 +5,7 @@
   "scripts": {
 	"prestart": "babel-node build-scripts/start-message.js",
 	"start": "npm-run-all --parallel security-check open:src",
-	"open:src": "node build-scripts/src-server.js",
+	"open:src": "babel-node build-scripts/src-server.js",
 	"security-check": "nsp check",
 	"share": "npm-run-all --parallel open:src now",
 	"now": "now --public"
