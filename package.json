@@ -7,6 +7,8 @@
     "start": "npm-run-all --parallel security-check open:src",
     "open:src": "babel-node build-scripts/src-server.js",
     "security-check": "nsp check",
+    "lint":"esw webpack.config.* src build-scripts --color lint:watch",
+    "lint:watch": "npm run lint -- --watch",
     "share": "npm-run-all --parallel open:src now",
     "now": "now --public"
   },
