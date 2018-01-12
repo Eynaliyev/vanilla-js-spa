@@ -10,7 +10,8 @@
     "lint":"esw webpack.config.* src build-scripts --color lint:watch",
     "lint:watch": "npm run lint -- --watch",
     "share": "npm-run-all --parallel open:src now",
-    "now": "now --public"
+    "now": "now --public",
+    "test": "mocha --reporter progress build-scripts/test-setup.js \"src/**/*.test.js\""
   },
   "author": "Rustam Eynaliyev",
   "license": "MIT",
