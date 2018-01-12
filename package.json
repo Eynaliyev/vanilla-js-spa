@@ -4,14 +4,15 @@
   "description": "JavaScript development environment Pluralsight env by Rustam Eynaliyev",
   "scripts": {
     "prestart": "babel-node build-scripts/start-message.js",
-    "start": "npm-run-all --parallel security-check open:src",
+    "start": "npm-run-all --parallel security-check open:src test",
     "open:src": "babel-node build-scripts/src-server.js",
     "security-check": "nsp check",
-    "lint":"esw webpack.config.* src build-scripts --color lint:watch",
+    "lint":"esw webpack.config.* src build-scripts --color lint:watch test:watch",
     "lint:watch": "npm run lint -- --watch",
     "share": "npm-run-all --parallel open:src now",
     "now": "now --public",
-    "test": "mocha --reporter progress build-scripts/test-setup.js \"src/**/*.test.js\""
+    "test": "mocha --reporter progress build-scripts/test-setup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Rustam Eynaliyev",
   "license": "MIT",
